@@ -11,9 +11,8 @@ namespace StringKata
             if (numbers == "")
             { return 0; }
 
-            var integerNumber = Convert.ToInt32(numbers);
-            return integerNumber;
-
+            var integerNumber = numbers.Split(",").Select(int.Parse);
+            return integerNumber.Sum();
        }
        
     }

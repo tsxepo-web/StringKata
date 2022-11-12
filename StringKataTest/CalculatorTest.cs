@@ -24,5 +24,13 @@ namespace StringKataTest
             var result = Calculator.Add("1");
             Assert.That(result, Is.EqualTo(1));
         }
+
+        [Test]
+        public void ShouldReturnTheSumOfTwoStringNumberPasssed()
+        {
+            Calculator calculator = new Calculator();
+            var result = Calculator.Add("1,2");
+            Assert.That(result, Is.EqualTo(3));
+        }
     }
 }
