@@ -7,11 +7,12 @@ namespace StringKata
     public class Calculator
     {
        public static int Add(string numbers)
-       {
-            if (numbers == "")
-            { return 0; }
+       {    
+            var separators = new char[] { ',', '\n' };
 
-            var integerNumber = numbers.Split(",").Select(int.Parse);
+            var integerNumber = numbers
+                .Split(separators, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse);
             return integerNumber.Sum();
        }
        
