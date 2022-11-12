@@ -11,8 +11,9 @@ namespace StringKata
             var separators = new char[] { ',', '\n' };
 
             var integerNumber = numbers
-                .Split(separators, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse);
+                .Split(Delimiters, StringSplitOptions.RemoveEmptyEntries)
+;               .Select(int.Parse);
+
             return integerNumber.Sum();
        }
        
